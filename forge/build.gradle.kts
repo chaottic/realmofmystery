@@ -20,10 +20,16 @@ loom {
 }
 
 dependencies {
-    minecraft("com.mojang:minecraft:1.19.2")
+    val minecraft_version: String by project
+
+    val corgilib_version: String by project
+    val forge_version: String by project
+
+    minecraft("com.mojang:minecraft:${minecraft_version}")
     mappings(loom.layered(LayeredMappingSpecBuilder::officialMojangMappings))
+    forge("net.minecraftforge:forge:${minecraft_version}-${forge_version}")
 
-    forge("net.minecraftforge:forge:1.19.2-43.2.4")
 
-    modImplementation("maven.modrinth:corgilib:1.19.2-1.0.0.22-forge")
+
+    modImplementation("maven.modrinth:corgilib:${minecraft_version}-${corgilib_version}-forge")
 }

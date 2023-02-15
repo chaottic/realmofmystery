@@ -2,10 +2,14 @@ plugins {
 	id("org.spongepowered.gradle.vanilla") version "0.2.1-SNAPSHOT"
 }
 
+val minecraft_version: String by project
+
+
 minecraft {
-	version("1.19.2")
+	version(minecraft_version)
 }
 
 dependencies {
-	compileOnly("maven.modrinth:corgilib:1.19.2-1.0.0.22-forge")
+	val corgilib_version: String by project
+	compileOnly("maven.modrinth:corgilib:${minecraft_version}-${corgilib_version}-forge")
 }

@@ -1,10 +1,12 @@
 package com.chaottic.realmofmystery.common;
 
+import corgitaco.corgilib.CorgiLibFabric;
 import net.fabricmc.api.ModInitializer;
 
-public final class RealmOfMystery implements ModInitializer {
+public final class RealmOfMysteryFabric implements ModInitializer {
     @Override
     public void onInitialize() {
+        CorgiLibFabric.initializeCorgiLib("Realm of mystery initializer.");
         RealmOfMysteryItems.class.getClassLoader();
     }
 }

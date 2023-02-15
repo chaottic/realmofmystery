@@ -18,11 +18,17 @@ loom {
 }
 
 dependencies {
-    minecraft("com.mojang:minecraft:1.19.2")
+    val minecraft_version: String by project
+    val fabric_version: String by project
+    val fabric_loader_version: String by project
+
+    minecraft("com.mojang:minecraft:${minecraft_version}")
     mappings(loom.layered(LayeredMappingSpecBuilder::officialMojangMappings))
 
-    modImplementation("net.fabricmc:fabric-loader:0.14.11")
-    modImplementation("net.fabricmc.fabric-api:fabric-api:0.68.1+1.19.3")
+    modImplementation("net.fabricmc:fabric-loader:${fabric_loader_version}")
+    modImplementation("net.fabricmc.fabric-api:fabric-api:${fabric_version}+${minecraft_version}")
 
-    modImplementation("maven.modrinth:corgilib:1.19.2-1.0.0.22-fabric")
+    val corgilib_version: String by project
+
+    modImplementation("maven.modrinth:corgilib:${minecraft_version}-${corgilib_version}-fabric")
 }

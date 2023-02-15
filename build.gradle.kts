@@ -21,6 +21,12 @@ allprojects {
         mavenCentral()
     }
 
+    dependencies {
+        if (project.name != "common") {
+            implementation(project(":common"))
+        }
+    }
+
     java {
         withSourcesJar()
     }

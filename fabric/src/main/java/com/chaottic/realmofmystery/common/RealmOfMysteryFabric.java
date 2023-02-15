@@ -7,6 +7,8 @@ public final class RealmOfMysteryFabric implements ModInitializer {
     @Override
     public void onInitialize() {
         CorgiLibFabric.initializeCorgiLib("Realm of mystery initializer.");
-        RealmOfMysteryItems.class.getClassLoader();
+
+        RealmOfMysteryBlocks.classLoad();
+        RealmOfMysteryItems.classLoad();
     }
 }

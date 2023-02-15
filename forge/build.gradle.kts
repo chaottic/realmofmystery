@@ -7,6 +7,10 @@ plugins {
 loom {
     silentMojangMappingsLicense()
 
+    forge {
+        mixinConfig("realmofmystery.mixins.json")
+    }
+
     runs {
         getByName("client") {
             client()

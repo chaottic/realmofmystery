@@ -23,6 +23,10 @@
       "com.chaottic.realmofmystery.client.RealmOfMysteryClient"
     ]
   },
+  "mixins": [
+    "realmofmystery.mixins.json",
+    "realmofmystery.fabric.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=0.14.11",
     "fabric-api": "*",

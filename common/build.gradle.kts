@@ -12,4 +12,5 @@ minecraft {
 dependencies {
 	val corgilib_version: String by project
 	compileOnly("maven.modrinth:corgilib:${minecraft_version}-${corgilib_version}-forge")
+	compileOnly("org.spongepowered:mixin:0.8.4")
 }

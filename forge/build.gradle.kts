@@ -20,8 +20,10 @@ loom {
 }
 
 dependencies {
-    minecraft("com.mojang:minecraft:1.19.3")
+    minecraft("com.mojang:minecraft:1.19.2")
     mappings(loom.layered(LayeredMappingSpecBuilder::officialMojangMappings))
 
-    forge("net.minecraftforge:forge:1.19.3-44.1.16")
+    forge("net.minecraftforge:forge:1.19.2-43.2.4")
+
+    modImplementation("maven.modrinth:corgilib:1.19.2-1.0.0.22-forge")
 }

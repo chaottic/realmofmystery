@@ -3,5 +3,9 @@ plugins {
 }
 
 minecraft {
-	version("1.19.3")
+	version("1.19.2")
+}
+
+dependencies {
+	compileOnly("maven.modrinth:corgilib:1.19.2-1.0.0.22-forge")
 }

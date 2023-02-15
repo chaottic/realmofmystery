@@ -27,6 +27,11 @@ allprojects {
 }
 
 subprojects {
+
+    repositories {
+        maven("https://api.modrinth.com/maven")
+    }
+
     if (project.name != "common") {
         val common = project(":common")
 

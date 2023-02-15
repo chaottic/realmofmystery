@@ -20,4 +20,8 @@ allprojects {
     repositories {
         mavenCentral()
     }
+
+    java {
+        withSourcesJar()
+    }
 }

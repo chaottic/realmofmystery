@@ -9,4 +9,4 @@ pluginManagement {
 }
 
 rootProject.name = "realmofmystery"
-include("forge")
+include("forge", "fabric")

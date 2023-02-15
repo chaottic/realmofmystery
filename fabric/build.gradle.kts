@@ -1,12 +1,10 @@
 import net.fabricmc.loom.api.mappings.layered.spec.LayeredMappingSpecBuilder
 
 plugins {
-    id("dev.architectury.loom") version "0.12.0-SNAPSHOT"
+    id("fabric-loom") version "1.1-SNAPSHOT"
 }
 
 loom {
-    silentMojangMappingsLicense()
-
     runs {
         getByName("client") {
             client()
@@ -23,5 +21,6 @@ dependencies {
     minecraft("com.mojang:minecraft:1.19.3")
     mappings(loom.layered(LayeredMappingSpecBuilder::officialMojangMappings))
 
-    forge("net.minecraftforge:forge:1.19.3-44.1.16")
+    modImplementation("net.fabricmc:fabric-loader:0.14.11")
+    modImplementation("net.fabricmc.fabric-api:fabric-api:0.68.1+1.19.3")
 }

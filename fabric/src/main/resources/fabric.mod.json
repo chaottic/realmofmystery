@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "realmofmystery",
+  "version": "${version}",
+
+  "name": "Realm of Mystery",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "MIT",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.chaottic.realmofmystery.common.RealmOfMystery"
+    ],
+    "client": [
+      "com.chaottic.realmofmystery.client.RealmOfMysteryClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.11",
+    "fabric-api": "*",
+    "minecraft": "~1.19.3",
+    "java": ">=17"
+  }
+}

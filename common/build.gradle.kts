@@ -1,19 +1,7 @@
 plugins {
-    id("java")
+	id("org.spongepowered.gradle.vanilla") version "0.2.1-SNAPSHOT"
 }
 
-group = "com.chaottic"
-version = "1.0-SNAPSHOT"
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
-}
-
-tasks.getByName<Test>("test") {
-    useJUnitPlatform()
+minecraft {
+	version("1.19.3")
 }

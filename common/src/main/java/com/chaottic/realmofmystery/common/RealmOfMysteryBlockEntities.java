@@ -1,4 +1,6 @@
 package com.chaottic.realmofmystery.common;
 
-public class RealmOfMysteryBlockEntities {
+public final class RealmOfMysteryBlockEntities {
+
+    private RealmOfMysteryBlockEntities() {}
 }
